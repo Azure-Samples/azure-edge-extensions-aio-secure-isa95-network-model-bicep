@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "network": {
+            "value": {
+                "vnet": {
+                    "addressPrefix": "10.0.0.0/8"
+                },
+                "subnets": {
+                    "bastion": {
+                        "name": "AzureBastionSubnet",
+                        "addressPrefix": "10.0.0.0/24"
+                    },
+                    "cloud": {
+                        "name": "snetcloud",
+                        "addressPrefix": "10.0.1.0/24"
+                    },
+                    "corp": {
+                        "name": "snetcorp",
+                        "addressPrefix": "10.0.2.0/24",
+                        "cluster": {
+                            "privateIPAddress": "10.0.2.4"
+                        },
+                        "proxy": {
+                            "frontPrivateIPAddress": "10.0.1.240",
+                            "backPrivateIPAddress": "10.0.2.250"
+                        }
+                    },
+                    "site": {
+                        "name": "snetsite",
+                        "addressPrefix": "10.1.1.0/24",
+                        "cluster": {
+                            "privateIPAddress": "10.1.1.4"
+                        },
+                        "proxy": {
+                            "frontPrivateIPAddress": "10.0.2.241",
+                            "backPrivateIPAddress": "10.1.1.250"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
