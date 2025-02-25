@@ -1,0 +1,6 @@
+---
+proxy:
+  # Proxy default user name
+  username: proxyuser
+  # Proxy default port
+  port: 5050
