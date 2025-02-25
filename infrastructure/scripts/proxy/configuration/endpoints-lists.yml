@@ -14,6 +14,7 @@ installEndpoints:
   - files.pythonhosted.org
   - packages.microsoft.com
   - azure.archive.ubuntu.com
+  - esm.ubuntu.com
   # https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-safelist-urls?tabs=public-cloud#general-azure-services-and-documentation
   - aka.ms
   - .azconfig.io
@@ -41,6 +42,9 @@ arcEndpoints:
   - .arc.azure.net
   - .obo.arc.azure.com
   - linuxgeneva-microsoft.azurecr.io
+  - registry-1.docker.io
+  - auth.docker.io
+  - production.cloudflare.docker.com
   # https://learn.microsoft.com/en-us/azure/azure-arc/network-requirements-consolidated?tabs=azure-cloud#azure-arc-enabled-data-services
   - .ods.opinsights.azure.com
   - .oms.opinsights.azure.com
@@ -54,3 +58,4 @@ aioEndpoints:
   # https://learn.microsoft.com/en-us/azure/iot-operations/deploy-iot-ops/overview-deploy#azure-iot-operations-endpoints
   - .azurecr.io
   - .blob.core.windows.net
+  - open-telemetry.github.io

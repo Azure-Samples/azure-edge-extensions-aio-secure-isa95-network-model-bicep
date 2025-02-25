@@ -90,7 +90,6 @@ installPreRequisites() {
     getLockFrontend
     upgradePackages
     installYq
-    installSquid
     installAzureCli
 
     logProgress "Prerequisites installed successfully."
