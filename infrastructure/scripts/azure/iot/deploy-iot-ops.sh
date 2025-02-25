@@ -107,7 +107,7 @@ installIoTOperationsOnAllClusters() {
         exit 1
     fi
 
-    local corpClusterName="vm${PREFIX}${ID}${ENVIRONMENT}corp"
+    local corpClusterName="cluster${PREFIX}${ID}${ENVIRONMENT}corp"
     installIoTOperations \
         "${corpClusterName}" \
         "${arcResourceGroupName}" \
@@ -130,7 +130,7 @@ installIoTOperationsOnAllClusters() {
         exit 1
     fi
 
-    local siteClusterName="vm${PREFIX}${ID}${ENVIRONMENT}site"
+    local siteClusterName="cluster${PREFIX}${ID}${ENVIRONMENT}site"
     installIoTOperations \
         "${siteClusterName}" \
         "${arcResourceGroupName}" \
