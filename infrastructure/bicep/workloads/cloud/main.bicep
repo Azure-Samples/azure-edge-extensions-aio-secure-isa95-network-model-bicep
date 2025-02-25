@@ -295,6 +295,7 @@ module managedIdentityClusterRoleAssignments '../../modules/roles/clusterRoleAss
     principalType: 'ServicePrincipal'
     keyVaultName: keyVaultModule.outputs.keyVaultName
     appConfigurationName: appConfigurationModule.outputs.appConfigurationName
+    managedGrafanaName: managedGrafana.name
   }
 }
 

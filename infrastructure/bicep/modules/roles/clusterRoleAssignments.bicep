@@ -19,6 +19,9 @@ param keyVaultName string
 @description('Specifies the name of the app configuration.')
 param appConfigurationName string
 
+@description('Specifies the name of the managed grafana.')
+param managedGrafanaName string
+
 // ------------------------------------------------------------
 // Resources - Resource Group Role Assignments
 // ------------------------------------------------------------
@@ -56,6 +59,25 @@ resource kubernetesExtensionContributorRoleAssignment 'Microsoft.Authorization/r
   name: guid(resourceGroup().id, principalId, kubernetesExtensionContributorRoleDefinition.id)
   properties: {
     roleDefinitionId: kubernetesExtensionContributorRoleDefinition.id
+    principalId: principalId
+    principalType: principalType
+  }
+}
+
+// monitoring contributor role definition
+var monitoringContributorId='749f88d5-cbae-40b8-bcfc-e573ddc772fa' // #gitleaks:allow
+@description('The built-in role for Monitoring Contributor.')
+resource monitoringContributorRoleDefinition 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
+  scope: subscription()
+  name: monitoringContributorId
+}
+
+// assign monitoring contributor role to principalId
+resource monitoringContributorRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  scope: resourceGroup()
+  name: guid(resourceGroup().id, principalId, monitoringContributorRoleDefinition.id)
+  properties: {
+    roleDefinitionId: monitoringContributorRoleDefinition.id
     principalId: principalId
     principalType: principalType
   }
@@ -112,6 +134,34 @@ resource appConfigurationContributorRoleAssignment 'Microsoft.Authorization/role
   name: guid(appConfiguration.id, principalId, appConfigurationContributorRoleDefinition.id)
   properties: {
     roleDefinitionId: appConfigurationContributorRoleDefinition.id
+    principalId: principalId
+    principalType: principalType
+  }
+}
+
+// ------------------------------------------------------------
+// Resources - Managed Grafana Role Assignments
+// ------------------------------------------------------------
+
+// get existing managed grafana
+resource managedGrafana 'Microsoft.Dashboard/grafana@2023-09-01' existing = {
+  name: managedGrafanaName
+}
+
+// grafana workspace contributor role definition
+var grafanaWorkspaceContributorId = '5c2d7e57-b7c2-4d8a-be4f-82afa42c6e95' // #gitleaks:allow
+@description('The built-in role for Grafana Workspace Contributor.')
+resource grafanaWorkspaceContributorRoleDefinition 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
+  scope: subscription()
+  name: grafanaWorkspaceContributorId
+}
+
+// assign grafana workspace contributor role to principalId
+resource grafanaWorkspaceContributorRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  scope: managedGrafana
+  name: guid(managedGrafana.id, principalId, grafanaWorkspaceContributorRoleDefinition.id)
+  properties: {
+    roleDefinitionId: grafanaWorkspaceContributorRoleDefinition.id
     principalId: principalId
     principalType: principalType
   }
