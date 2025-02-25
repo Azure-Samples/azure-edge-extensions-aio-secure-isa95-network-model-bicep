@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Ubuntu",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {
+			"extensions": "connectedk8s,k8s-extension",
+			"installBicep": true
+		},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+		"ghcr.io/devcontainers/features/python:1": {}
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-azuretools.vscode-bicep",
+				"davidanson.vscode-markdownlint",
+				"esbenp.prettier-vscode",
+				"foxundermoon.shell-format",
+				"timonwong.shellcheck"
+			]
+		}
+	},
+	"mounts": [
+		"type=bind,source=${localWorkspaceFolder},target=/workspace",
+		"type=bind,source=${localEnv:HOME}${env:USERPROFILE}/.ssh,target=/home/vscode/.ssh",
+		"type=bind,source=${localEnv:HOME}${env:USERPROFILE}/.kube,target=/home/vscode/.kube",
+		"type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock"
+	]
+}
