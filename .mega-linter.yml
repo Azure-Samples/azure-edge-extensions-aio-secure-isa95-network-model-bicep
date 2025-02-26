@@ -6,4 +6,4 @@ DISABLE_LINTERS:
   - COPYPASTE_JSCPD
   - JSON_V8R
 
-FILTER_REGEX_EXCLUDE: '(\.github/workflows)'
+FILTER_REGEX_EXCLUDE: '(.github/workflows/)'
