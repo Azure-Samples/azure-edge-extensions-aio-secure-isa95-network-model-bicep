@@ -17,8 +17,8 @@ This project framework provides the following features:
 
 ### Prerequisites
 
-- (Optionally for Windows) [WSL](https://learn.microsoft.com/windows/wsl/install) installed and setup.
-- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) available on the command line where this will be deployed.
+* (Optionally for Windows) [WSL](https://learn.microsoft.com/windows/wsl/install) installed and setup.
+* [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) available on the command line where this will be deployed.
 
 You can also use the dev container included in this repository for a consistent development environment.
 
