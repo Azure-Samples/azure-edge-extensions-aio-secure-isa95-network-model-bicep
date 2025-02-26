@@ -1,6 +1,6 @@
 ---
 # Run MegaLinter to detect linting and security issues
-
+# More info at https://megalinter.io
 trigger: none
 
 pool:
