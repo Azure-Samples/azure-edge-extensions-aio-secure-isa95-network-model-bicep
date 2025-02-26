@@ -34,6 +34,12 @@ This identity is used by the virtual machine hosting the Kubernetes cluster.
 - **Description**:  Can create, update, get, list and delete Kubernetes Extensions, and get extension async operations.
 - **Scope**: Resource Group
 
+### Monitoring Contributor
+
+- **Role Definition ID**: [749f88d5-cbae-40b8-bcfc-e573ddc772fa](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/monitor#monitoring-contributor)
+- **Description**:  Can read all monitoring data and edit monitoring settings.
+- **Scope**: Resource Group
+
 ### Key Vault Secrets Officer
 
 - **Role Definition ID**: [b86a8fe4-44ce-4948-aee5-eccb2c155cd7](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#key-vault-secrets-officer)
