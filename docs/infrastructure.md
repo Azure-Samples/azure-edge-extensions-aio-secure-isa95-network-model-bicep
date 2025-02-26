@@ -61,11 +61,11 @@ The `bicep` folders contain the Bicep configuration files needed to deploy the s
 
 Add the networking foundation by setting up Virtual Network, Subnets, Network Security Groups and Bastion Host. Is completed by proxies to restrict communication between layers.
 
-| Subnet name             | CIDR | Description                                                                                                          |
-|-------------------------|------|----------------------------------------------------------------------------------------------------------------------|
-| `AzureBastionHost`      | /24  | Reserved subnet used for [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-overview) solution. |
-| `snetcloud{suffix}`     | /24  | Contains fundamentals resources (key vault, acr, storage) configured with private endpoints.                         |
-| `snetcorp{suffix}`      | /24  | Contains virtual machine (hosting k3s) accessible only using Azure Bastion.                                          |
+| Subnet name         | CIDR | Description                                                                                                          |
+|---------------------|------|----------------------------------------------------------------------------------------------------------------------|
+| `AzureBastionHost`  | /24  | Reserved subnet used for [Azure Bastion](https://learn.microsoft.com/en-us/azure/bastion/bastion-overview) solution. |
+| `snetcloud{suffix}` | /24  | Contains fundamentals resources (key vault, acr, storage) configured with private endpoints.                         |
+| `snetcorp{suffix}`  | /24  | Contains virtual machine (hosting k3s) accessible only using Azure Bastion.                                          |
 | `snetsite{suffix}`  | /24  | Contains virtual machine (hosting k3s) accessible only using Azure Bastion.                                          |
 
 #### Azure Bastion
@@ -84,7 +84,7 @@ Add the following resources:
 | Resource name           | Description                                                                                                                                                                                                                       |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `Key Vault`             | [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview) is a cloud service for securely storing and accessing secrets.                                                                              |
-| `App Configuration`     | [Azure App Configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview) provides a service to centrally manage application settings and feature flags                                                                             |
+| `App Configuration`     | [Azure App Configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/overview) provides a service to centrally manage application settings and feature flags                                                 |
 | `Storage Account`       | Storage account configured as [Data Lake](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) with hierachical namespace to host schema registry.                                               |
 | `Container Registry`    | [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-intro) is a managed registry service based on the open-source Docker Registry 2.0.                                       |
 | `Azure Monitor`         | [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) is a comprehensive monitoring solution for collecting, analyzing, and responding to monitoring data from your cloud and on-premises environments. |
