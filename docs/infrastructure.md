@@ -92,9 +92,9 @@ Add the following resources:
 
 #### Private Endpoints
 
-![Private Endpoints](./assets/infrastructure-endpoints.png)
-
 `Key Vault`, `App Configuration`, `Storage Account`, and `Container Registry` are configured with private endpoints to restrict access to these resources within the Virtual Network (VNet).
+
+> **Note:** The private endpoint for the storage account prevents the use of the schema registry in dataflows. Please disable this option if you need to use this feature.
 
 Public network access is disabled for App Configuration, the Storage Account and the Container Registry. However, the Key Vault requires public access during the deployment setup to store keys from the deployment scripts. This access is restricted by a firewall. Additionally, public access is necessary to use Azure Bastion from the portal and securely access RDP/SSH keys.
 
