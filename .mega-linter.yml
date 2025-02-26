@@ -5,3 +5,6 @@ DISABLE_LINTERS:
   - JSON_JSONLINT
   - COPYPASTE_JSCPD
   - JSON_V8R
+
+FILTER_REGEX_EXCLUDE:
+  - ^\.github/workflows/.*$
