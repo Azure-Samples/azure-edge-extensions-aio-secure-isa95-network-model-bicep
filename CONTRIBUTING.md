@@ -12,25 +12,31 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+<!-- markdown-link-check-disable -->
  - [Code of Conduct](#coc)
  - [Issues and Bugs](#issue)
  - [Feature Requests](#feature)
- - [Submission Guidelines](#submit)
+ - [Submission Guidelines](#submit) 
+<!-- markdown-link-check-enable -->
 
 ## <a name="coc"></a> Code of Conduct
 Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 
 ## <a name="issue"></a> Found an Issue?
+<!-- markdown-link-check-disable -->
 If you find a bug in the source code or a mistake in the documentation, you can help us by
 [submitting an issue](#submit-issue) to the GitHub Repository. Even better, you can
 [submit a Pull Request](#submit-pr) with a fix.
+<!-- markdown-link-check-enable -->
 
 ## <a name="feature"></a> Want a Feature?
+<!-- markdown-link-check-disable -->
 You can *request* a new feature by [submitting an issue](#submit-issue) to the GitHub
 Repository. If you would like to *implement* a new feature, please submit an issue with
 a proposal for your work first, to be sure that we can use it.
 
 * **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
+<!-- markdown-link-check-enable -->
 
 ## <a name="submit"></a> Submission Guidelines
 
@@ -51,12 +57,12 @@ chances of your issue being dealt with quickly:
 * **Suggest a Fix** - if you can't fix the bug yourself, perhaps you can point to what might be
   causing the problem (line of code or commit)
 
-You can file new issues by providing the above information at the corresponding repository's issues link: https://github.com/[organization-name]/[repository-name]/issues/new].
+You can file new issues by providing the above information at the corresponding repository's issues link: https://github.com/Azure-Samples/azure-edge-extensions-aio-secure-isa95-network-model-bicep/issues/new.
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-* Search the repository (https://github.com/[organization-name]/[repository-name]/pulls) for an open or closed PR
+* Search the repository (https://github.com/Azure-Samples/azure-edge-extensions-aio-secure-isa95-network-model-bicep/pulls) for an open or closed PR
   that relates to your submission. You don't want to duplicate effort.
 
 * Make your changes in a new git fork:

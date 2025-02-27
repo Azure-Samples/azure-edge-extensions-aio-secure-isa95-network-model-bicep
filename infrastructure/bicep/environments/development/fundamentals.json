@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "deployBastionHost": {
+      "value": true
+    },
+    "keyVaultSku": {
+      "value": "standard"
+    },
+    "keyVaultPublicNetworkAccess": {
+      "value": "Enabled"
+    },
+    "keyVaultSoftDeleteRetentionInDays": {
+      "value": 7
+    },
+    "keyVaultAddPrivateEndpoint": {
+      "value": true
+    },
+    "acrSku": {
+      "value": "Premium"
+    },
+    "acrPublicNetworkAccess": {
+      "value": "Disabled"
+    },
+    "acrAddPrivateEndpoint": {
+      "value": true
+    },
+    "hnsStorageSku": {
+      "value": "Standard_LRS"
+    },
+    "hnsStoragePublicNetworkAccess": {
+      "value": "Disabled"
+    },
+    "hnsStorageAddPrivateEndpoint": {
+      "value": true
+    },
+    "appConfigurationSku": {
+      "value": "standard"
+    },
+    "appConfigurationPublicNetworkAccess": {
+      "value": "Enabled"
+    },
+    "appConfigurationAddPrivateEndpoint": {
+      "value": true
+    }
+  }
+}

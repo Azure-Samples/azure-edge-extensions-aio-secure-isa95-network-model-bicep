@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "proxyImageReference": {
+        "value": {
+          "publisher": "Canonical",
+          "offer": "0001-com-ubuntu-server-jammy",
+          "sku": "22_04-lts-gen2",
+          "version": "latest"
+        }
+      },
+      "proxySize": {
+        "value": "Standard_B2ms"
+      },
+      "proxyAdminUserName": {
+        "value": "azureuser"
+      },
+      "proxyAutoShutdownStatus": {
+        "value": "Enabled"
+      },
+      "proxyAutoShutdownTime": {
+        "value": "2200"
+      },
+      "proxyAutoShutdownTimeZoneId": {
+        "value": "Romance Standard Time"
+      }
+    }
+  }

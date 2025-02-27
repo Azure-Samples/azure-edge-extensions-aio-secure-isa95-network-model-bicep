@@ -1,0 +1,30 @@
+---
+# Run MegaLinter to detect linting and security issues
+# More info at https://megalinter.io
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  # Pull MegaLinter docker image
+  - script: docker pull oxsecurity/megalinter:v8.3.0
+    displayName: Pull MegaLinter
+
+  # Run MegaLinter
+  # https://megalinter.io/latest/install-azure/
+  - script: |
+      docker run -v $(System.DefaultWorkingDirectory):/tmp/lint \
+        --env-file <(env | grep -e SYSTEM_ -e BUILD_ -e TF_ -e AGENT_) \
+        -e SYSTEM_ACCESSTOKEN=$(System.AccessToken) \
+        -e GIT_AUTHORIZATION_BEARER=$(System.AccessToken) \
+        oxsecurity/megalinter:v8.3.0
+    displayName: Run MegaLinter
+
+  # Upload MegaLinter reports
+  - task: PublishPipelineArtifact@1
+    condition: succeededOrFailed()
+    displayName: Upload MegaLinter reports
+    inputs:
+      targetPath: "$(System.DefaultWorkingDirectory)/megalinter-reports/"
+      artifactName: MegaLinterReport
