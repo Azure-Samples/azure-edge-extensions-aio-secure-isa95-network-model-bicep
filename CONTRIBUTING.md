@@ -23,19 +23,20 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 
 ## <a name="issue"></a> Found an Issue?
-<!-- markdown-link-check-disable-next-line -->
+<!-- markdown-link-check-disable -->
 If you find a bug in the source code or a mistake in the documentation, you can help us by
 [submitting an issue](#submit-issue) to the GitHub Repository. Even better, you can
 [submit a Pull Request](#submit-pr) with a fix.
+<!-- markdown-link-check-enable -->
 
 ## <a name="feature"></a> Want a Feature?
-<!-- markdown-link-check-disable-next-line -->
+<!-- markdown-link-check-disable -->
 You can *request* a new feature by [submitting an issue](#submit-issue) to the GitHub
 Repository. If you would like to *implement* a new feature, please submit an issue with
 a proposal for your work first, to be sure that we can use it.
 
-<!-- markdown-link-check-disable-next-line -->
 * **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
+<!-- markdown-link-check-enable -->
 
 ## <a name="submit"></a> Submission Guidelines
 
