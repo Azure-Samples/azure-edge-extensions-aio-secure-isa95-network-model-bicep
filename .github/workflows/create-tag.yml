@@ -1,5 +1,5 @@
 ---
-name: Main Branch CI
+name: Versioning
 on:
   push:
     branches:
