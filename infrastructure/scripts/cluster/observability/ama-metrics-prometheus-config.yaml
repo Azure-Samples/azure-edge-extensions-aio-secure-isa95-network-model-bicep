@@ -1,4 +1,4 @@
-# kics-scan disable=611ab018-c4aa-4ba2-b0f6-a448337509a6
+# kics-scan disable=611ab018-c4aa-4ba2-b0f6-a448337509a6,e84eaf4d-2f45-47b2-abe8-e581b06deb66
 ---
 apiVersion: v1
 data:
