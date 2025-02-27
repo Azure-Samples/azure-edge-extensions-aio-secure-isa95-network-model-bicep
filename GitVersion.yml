@@ -1,6 +1,7 @@
+---
 assembly-versioning-scheme: MajorMinorPatch
 mode: ContinuousDelivery
-tag-prefix: '[vV]'
+tag-prefix: "[vV]"
 continuous-delivery-fallback-tag: ci
 major-version-bump-message: '\+semver:\s?(breaking|major)'
 minor-version-bump-message: '\+semver:\s?(feature|minor)'
