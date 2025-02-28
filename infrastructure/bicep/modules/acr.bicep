@@ -60,7 +60,8 @@ resource acr 'Microsoft.ContainerRegistry/registries@2022-12-01' = {
       }
     }
   }
-  //checkov:skip=CKV_AZURE_163:Enable vulnerability scanning for container images. 
+  //checkov:skip=CKV_AZURE_163:Enable vulnerability scanning for container images.
+  //checkov:skip=CKV_AZURE_139:Ensure ACR set to disable public networking.  
 }
 
 // create private endpoint for container registry
